@@ -1,7 +1,10 @@
 import 'package:calendar_scheduler/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding();
+  await initializeDateFormatting();
   runApp(const MyApp());
 }
 
