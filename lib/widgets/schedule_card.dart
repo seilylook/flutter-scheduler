@@ -1,4 +1,4 @@
-import 'package:calendar_scheduler/constants/colors.dart';
+import 'package:calendar_scheduler/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class ScheduleCard extends StatelessWidget {

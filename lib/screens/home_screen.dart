@@ -1,5 +1,6 @@
 import 'package:calendar_scheduler/widgets/main_calendar.dart';
 import 'package:calendar_scheduler/widgets/schedule_card.dart';
+import 'package:calendar_scheduler/widgets/today_banner.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,6 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
               selectedDate: selectedDate,
               onDaySelected: onDaySelected,
             ),
+            TodayBanner(selectedDate: selectedDate, count: 0),
+            const SizedBox(height: 8.0),
             ScheduleCard(startTime: 12, endTime: 14, content: 'flutter 프로젝트'),
           ],
         ),
