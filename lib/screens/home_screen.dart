@@ -47,7 +47,16 @@ class _HomeScreenState extends State<HomeScreen> {
               selectedDate: selectedDate,
               onDaySelected: onDaySelected,
             ),
-            TodayBanner(selectedDate: selectedDate, count: 0),
+            const SizedBox(height: 8.9),
+            StreamBuilder<List<Schedule>>(
+              stream: GetIt.I<LocalDatabase>().watchSchedules(selectedDate),
+              builder: (context, snapshot) {
+                return TodayBanner(
+                  selectedDate: selectedDate,
+                  count: snapshot.data?.length ?? 0,
+                );
+              },
+            ),
             const SizedBox(height: 8.0),
             Expanded(
               child: StreamBuilder<List<Schedule>>(
