@@ -1,4 +1,4 @@
-package com.example.calendar_scheduler
+package seilylook.calendarscheduler
 
 import io.flutter.embedding.android.FlutterActivity
 
