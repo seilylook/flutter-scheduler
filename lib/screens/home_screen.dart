@@ -1,13 +1,11 @@
 import 'package:calendar_scheduler/constants/constants.dart';
 import 'package:calendar_scheduler/model/schedule_model.dart';
-import 'package:calendar_scheduler/provider/schedule_provider.dart';
 import 'package:calendar_scheduler/widgets/main_calendar.dart';
 import 'package:calendar_scheduler/widgets/schedule_bottom_sheet.dart';
 import 'package:calendar_scheduler/widgets/schedule_card.dart';
 import 'package:calendar_scheduler/widgets/today_banner.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -89,12 +87,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   .snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
-                  return Center(
+                  return const Center(
                     child: Text('일정 정보를 가져오지 못했습니다.'),
                   );
                 }
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 }
