@@ -10,17 +10,19 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:calendar_scheduler/firebase_options.dart';
 
 void main() async {
-  WidgetsFlutterBinding();
+  WidgetsFlutterBinding.ensureInitialized();
 
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await initializeDateFormatting();
+
   final database = LocalDatabase();
-  GetIt.I.registerSingleton<LocalDatabase>(database);
   final api = ScheduleAPI();
   final scheduleProvider = ScheduleProvider(api: api);
+
+  GetIt.I.registerSingleton<LocalDatabase>(database);
 
   runApp(
     ChangeNotifierProvider(
