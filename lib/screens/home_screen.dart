@@ -145,10 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
     DateTime focusedDate,
     BuildContext context,
   ) {
-    final provider = context.read<ScheduleProvider>();
-    provider.changeSelectedDate(
-      date: selectedDate,
-    );
-    provider.getSchedules(date: selectedDate);
+    setState(() {
+      this.selectedDate = selectedDate;
+    });
   }
 }

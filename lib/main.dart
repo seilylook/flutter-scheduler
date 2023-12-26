@@ -18,17 +18,20 @@ void main() async {
 
   await initializeDateFormatting();
 
-  final database = LocalDatabase();
-  final api = ScheduleAPI();
-  final scheduleProvider = ScheduleProvider(api: api);
+  // final database = LocalDatabase();
+  // final api = ScheduleAPI();
+  // final scheduleProvider = ScheduleProvider(api: api);
 
-  GetIt.I.registerSingleton<LocalDatabase>(database);
+  // GetIt.I.registerSingleton<LocalDatabase>(database);
 
+  // runApp(
+  //   ChangeNotifierProvider(
+  //     create: (_) => scheduleProvider,
+  //     child: const MyApp(),
+  //   ),
+  // );
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => scheduleProvider,
-      child: const MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
