@@ -1,5 +1,6 @@
 import 'package:calendar_scheduler/constants/constants.dart';
 import 'package:calendar_scheduler/model/schedule_model.dart';
+import 'package:calendar_scheduler/widgets/banner_ad_widget.dart';
 import 'package:calendar_scheduler/widgets/main_calendar.dart';
 import 'package:calendar_scheduler/widgets/schedule_bottom_sheet.dart';
 import 'package:calendar_scheduler/widgets/schedule_card.dart';
@@ -104,8 +105,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                     .toList();
 
-                return ListView.builder(
+                return ListView.separated(
                   itemCount: schedules.length,
+                  separatorBuilder: (context, index) {
+                    return BannerAdWidget();
+                  },
                   itemBuilder: (context, index) {
                     final schedule = schedules[index];
 
