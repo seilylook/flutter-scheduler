@@ -1,16 +1,35 @@
-# calendar_scheduler
+# Flutter - Calendar Scheduler
 
-A new Flutter project.
+## Dependency
 
-## Getting Started
+### Client
 
-This project is a starting point for a Flutter application.
+```
+dependencies:
+  flutter:
+    sdk: flutter
 
-A few resources to get you started if this is your first Flutter project:
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  table_calendar: ^3.0.9
+  intl: ^0.18.1
+  drift: ^2.14.1
+  sqlite3_flutter_libs: ^0.5.18
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  get_it: ^7.6.4
+  dio: ^5.4.0
+  provider: ^6.1.1
+  uuid: ^4.2.2
+  firebase_core: ^2.24.2
+  cloud_firestore: ^4.13.6
+  google_mobile_ads: ^4.0.0
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Server & Database
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Google Firebase & Firestore
+
+### Service Preview
+
