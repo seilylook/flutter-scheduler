@@ -33,3 +33,12 @@ dependencies:
 
 ### Service Preview
 
+
+
+<table>
+  <tr>
+    <td><img src="/flutter-scheduler-1.png" /></td>
+    <td><img src="/flutter-scheduler-3.png"></td>
+    <td><img src="/flutter-scheduler-4.png"></td>
+  </tr>
+</table>
